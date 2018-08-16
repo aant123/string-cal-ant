@@ -15,6 +15,8 @@ function itAlwaysBe2() {
 
 function test1() {
   expect(test('')).to.be.equal(0);
+  expect(test('102')).to.be.equal(102);
+  expect(test('55555')).to.be.equal(55555);
 }
 // Start Example Behaviors
 function exampleBehaviors() {
