@@ -18,11 +18,18 @@ function test1() {
   expect(test('102')).to.be.equal(102);
   expect(test('55555')).to.be.equal(55555);
 }
+
+function test3() {
+  expect(test('2,3')).to.be.equal(5);
+  expect(test('2\n3')).to.be.equal(5);
+}
+
 // Start Example Behaviors
 function exampleBehaviors() {
   it('should be true', itAlwaysTrue);
   it('should be equal 2', itAlwaysBe2);
   it('should be equal 0', test1);
+  it('sum String', test3);
 }
 
 
