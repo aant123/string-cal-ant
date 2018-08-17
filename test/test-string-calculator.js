@@ -26,12 +26,21 @@ function test3() {
   expect(test('2\n3\n4')).to.be.equal(9);
 }
 
+function callTestWithNegativeNumber() {
+  return test('-1');
+}
+
+function testNegative() {
+  expect(callTestWithNegativeNumber).to.throw(Error);
+}
+
 // Start Example Behaviors
 function exampleBehaviors() {
   it('should be true', itAlwaysTrue);
   it('should be equal 2', itAlwaysBe2);
   it('should be equal 0', test1);
   it('sum String', test3);
+  it('test negative', testNegative);
 }
 
 
