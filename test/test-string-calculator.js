@@ -26,6 +26,10 @@ function test3() {
   expect(test('2\n3\n4')).to.be.equal(9);
 }
 
+function check1000() {
+  expect(test('2000,4,2')).to.be.equal(6);
+}
+
 function callTestWithNegativeNumber() {
   return test('-1');
 }
@@ -41,6 +45,7 @@ function exampleBehaviors() {
   it('should be equal 0', test1);
   it('sum String', test3);
   it('test negative', testNegative);
+  it('should be 6', check1000);
 }
 
 
