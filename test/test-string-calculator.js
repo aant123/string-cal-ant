@@ -22,6 +22,8 @@ function test1() {
 function test3() {
   expect(test('2,3')).to.be.equal(5);
   expect(test('2\n3')).to.be.equal(5);
+  expect(test('2,3,4')).to.be.equal(9);
+  expect(test('2\n3\n4')).to.be.equal(9);
 }
 
 // Start Example Behaviors
