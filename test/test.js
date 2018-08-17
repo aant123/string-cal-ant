@@ -1,12 +1,10 @@
 function test(a) {
-  let number;
   if (a === '') {
     return 0;
-  } else if (a.includes(',') || a.includes('\n')) {
-    number = a.split(/[\s,]+/);
-    return parseInt(number[0], 10) + parseInt(number[1], 10);
-  } 
-  return parseInt(a, 10);
+  } else if (a.includes('\n') || a.includes(',')) {
+    return a.split(/[\s,]+/).reduce((sum, x) => sum + parseInt(x, 10), 0);
+  } else if (!Number.isNaN(a)) { return parseInt(a, 10); }
+  return 1;
 }
 
 module.exports = test;
